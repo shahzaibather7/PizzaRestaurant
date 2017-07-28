@@ -39,12 +39,9 @@
 //Method for pizza toppings
     
     +(NSString*) convertPizzaArraytoStringToppings: (NSArray*) orderArray {
+                
+        NSString* result = [orderArray componentsJoinedByString:@" "];
         
-        
-        
-        NSString * result = [[orderArray valueForKey:@"description"] componentsJoinedByString:@" "];
-        
-        NSLog(@"The toppings for the pizza you ordered are : %@ ", result);
         return result;
     }
     

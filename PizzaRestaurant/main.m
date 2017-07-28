@@ -43,23 +43,18 @@ int main(int argc, const char * argv[])
 ////Taking user input and converting it into a NSMutable Array
                 
                 NSMutableArray *mutableCommandWords = [commandWords mutableCopy];
-//                
-//                 [mutableCommandWords removeObjectAtIndex:0];
-//                
-//                NSArray *shorterArrayforPizzaTopping = [[NSArray alloc] initWithArray: mutableCommandWords ];
-//                
-//                NSLog(@"%@", shorterArrayforPizzaTopping);
-//                
-//           //     NSString *sizeStringSent = commandWords[0];
 
                 
-                [restaurantKitchen makePizzaWithSize:[Pizza convertStringtoSize: [Pizza getFirstElementArray:mutableCommandWords]] andToppings:[Pizza getRestofArrayToppings:mutableCommandWords] ];
+                Pizza *cookedPizza = [restaurantKitchen makePizzaWithSize:[Pizza convertStringtoSize: [Pizza getFirstElementArray:mutableCommandWords]] andToppings:[Pizza getRestofArrayToppings:mutableCommandWords] ];
                 
 
                 
                 // And then send some message to the kitchen...
-
-            
+//Printing out pizza toppings
+               
+                NSLog(@"The toppings for the pizza you ordered are : %@ ", [Pizza convertPizzaArraytoStringToppings:cookedPizza.pizzaToppings]);
+                
+                NSLog(@"Pizza %@" , cookedPizza);
             
         }
         
