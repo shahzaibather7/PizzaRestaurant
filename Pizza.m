@@ -23,12 +23,12 @@
     
    
     
-    +(NSString*) getFirstElementArray : (NSArray*) fullArray {
-        NSString *theSizeFirstElement = fullArray[0];
+    +(NSString*) getFirstElementArray : (NSMutableArray*) fullArray {
+        NSString *theSizeFirstElement = [fullArray firstObject];
         return theSizeFirstElement;
     }
+
     +(NSArray*)  getRestofArrayToppings : (NSMutableArray*) fullArray{
-      
         [ fullArray removeObjectAtIndex:0];
         NSArray *newToppingArray = [[NSArray alloc] initWithArray:fullArray];
         return newToppingArray;
@@ -39,7 +39,8 @@
 //Method for pizza toppings
     
     +(NSString*) convertPizzaArraytoStringToppings: (NSArray*) orderArray {
-                
+        
+        
         NSString* result = [orderArray componentsJoinedByString:@" "];
         
         return result;
@@ -66,6 +67,8 @@
         }
         return Nothing;
     }
+    
+    
     
     
     

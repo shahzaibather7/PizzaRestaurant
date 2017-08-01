@@ -9,24 +9,47 @@
 #import <Foundation/Foundation.h>
 
 #import "Kitchen.h"
+#import "AngryManager.h"
+#import "CheerfulManager.h"
+#import "Manager.h"
 
 int main(int argc, const char * argv[])
 {
 
     @autoreleasepool {
         
-        NSLog(@"Please pick your pizza size and toppings:");
+       
         
         Kitchen *restaurantKitchen = [Kitchen new];
 
 
         
-          
-            
+        NSLog(@"SELECT YOUR MANAGER \n Input the number : 1 for Nice Manager \n Input the number: 2 for Rude Manager ");
+        char managerSelector[100];
+        fgets (managerSelector, 100, stdin);
+        NSString *inputString2 = [[NSString alloc] initWithUTF8String:managerSelector];
+        inputString2 = [inputString2 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+       
+
+        
+//Going into while loop  --------------------------------------------------------------------------------------------------
             while (TRUE) {
-                // Loop forever
+               
+
+//Asks user what kind of manager they would want
+            
+                if ([inputString2 isEqualToString:@"1"]) {
+                  Manager *niceManger = [[CheerfulManager alloc]init];
+                    NSLog(@"You have chose the nice manager %@", niceManger);
+                }
+            
+            else if ([inputString2  isEqual: @"2"]) {
+                  Manager *angryManager = [[AngryManager alloc]init];
+                    NSLog(@"You have chose the angry manager %@" , angryManager);
+                }
+                                
                 
-                NSLog(@"> ");
+                NSLog(@"Please pick your pizza size and toppings:");
                 char str[100];
                 fgets (str, 100, stdin);
                 
@@ -45,6 +68,7 @@ int main(int argc, const char * argv[])
                 NSMutableArray *mutableCommandWords = [commandWords mutableCopy];
 
                 
+                
                 Pizza *cookedPizza = [restaurantKitchen makePizzaWithSize:[Pizza convertStringtoSize: [Pizza getFirstElementArray:mutableCommandWords]] andToppings:[Pizza getRestofArrayToppings:mutableCommandWords] ];
                 
 
@@ -52,9 +76,10 @@ int main(int argc, const char * argv[])
                 // And then send some message to the kitchen...
 //Printing out pizza toppings
                
-                NSLog(@"The toppings for the pizza you ordered are : %@ ", [Pizza convertPizzaArraytoStringToppings:cookedPizza.pizzaToppings]);
+                NSString *pizzaToppingConvertedString = [Pizza convertPizzaArraytoStringToppings:cookedPizza.pizzaToppings];
+                NSLog(@"The toppings for the pizza you ordered are : %@ ",pizzaToppingConvertedString );
                 
-                NSLog(@"Pizza %@" , cookedPizza);
+                
             
         }
         

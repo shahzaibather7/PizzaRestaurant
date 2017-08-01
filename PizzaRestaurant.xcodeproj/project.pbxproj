@@ -10,6 +10,9 @@
 		11AC6E5E1F2A68900099F1C1 /* Kitchen.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E5C1F2A68900099F1C1 /* Kitchen.m */; };
 		11AC6E5F1F2A68900099F1C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E5D1F2A68900099F1C1 /* main.m */; };
 		11AC6E621F2A69520099F1C1 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E611F2A69520099F1C1 /* Pizza.m */; };
+		11AC6E6A1F2BC6430099F1C1 /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E691F2BC6430099F1C1 /* Manager.m */; };
+		11AC6E6D1F2BD77C0099F1C1 /* AngryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E6C1F2BD77C0099F1C1 /* AngryManager.m */; };
+		11AC6E701F2BD7BD0099F1C1 /* CheerfulManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AC6E6F1F2BD7BD0099F1C1 /* CheerfulManager.m */; };
 		6001EC81197B4EC300F97011 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6001EC80197B4EC300F97011 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,13 @@
 		11AC6E5D1F2A68900099F1C1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PizzaRestaurant/main.m; sourceTree = "<group>"; };
 		11AC6E601F2A69520099F1C1 /* Pizza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
 		11AC6E611F2A69520099F1C1 /* Pizza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
+		11AC6E671F2BC1C30099F1C1 /* KitchenDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KitchenDelegate.h; sourceTree = "<group>"; };
+		11AC6E681F2BC6430099F1C1 /* Manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		11AC6E691F2BC6430099F1C1 /* Manager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		11AC6E6B1F2BD77C0099F1C1 /* AngryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngryManager.h; sourceTree = "<group>"; };
+		11AC6E6C1F2BD77C0099F1C1 /* AngryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngryManager.m; sourceTree = "<group>"; };
+		11AC6E6E1F2BD7BD0099F1C1 /* CheerfulManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheerfulManager.h; sourceTree = "<group>"; };
+		11AC6E6F1F2BD7BD0099F1C1 /* CheerfulManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheerfulManager.m; sourceTree = "<group>"; };
 		6001EC7D197B4EC300F97011 /* PizzaRestaurant */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PizzaRestaurant; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001EC80197B4EC300F97011 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -51,12 +61,19 @@
 		6001EC74197B4EC300F97011 = {
 			isa = PBXGroup;
 			children = (
+				11AC6E671F2BC1C30099F1C1 /* KitchenDelegate.h */,
 				11AC6E5B1F2A68900099F1C1 /* PizzaRestaurant-Prefix.pch */,
 				11AC6E5D1F2A68900099F1C1 /* main.m */,
 				11AC6E5A1F2A68900099F1C1 /* Kitchen.h */,
 				11AC6E5C1F2A68900099F1C1 /* Kitchen.m */,
 				11AC6E601F2A69520099F1C1 /* Pizza.h */,
 				11AC6E611F2A69520099F1C1 /* Pizza.m */,
+				11AC6E681F2BC6430099F1C1 /* Manager.h */,
+				11AC6E691F2BC6430099F1C1 /* Manager.m */,
+				11AC6E6B1F2BD77C0099F1C1 /* AngryManager.h */,
+				11AC6E6C1F2BD77C0099F1C1 /* AngryManager.m */,
+				11AC6E6E1F2BD7BD0099F1C1 /* CheerfulManager.h */,
+				11AC6E6F1F2BD7BD0099F1C1 /* CheerfulManager.m */,
 				6001EC7F197B4EC300F97011 /* Frameworks */,
 				6001EC7E197B4EC300F97011 /* Products */,
 			);
@@ -129,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AC6E6D1F2BD77C0099F1C1 /* AngryManager.m in Sources */,
 				11AC6E621F2A69520099F1C1 /* Pizza.m in Sources */,
 				11AC6E5F1F2A68900099F1C1 /* main.m in Sources */,
 				11AC6E5E1F2A68900099F1C1 /* Kitchen.m in Sources */,
+				11AC6E6A1F2BC6430099F1C1 /* Manager.m in Sources */,
+				11AC6E701F2BD7BD0099F1C1 /* CheerfulManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

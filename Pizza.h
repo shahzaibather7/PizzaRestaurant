@@ -18,20 +18,17 @@ typedef enum {
 @interface Pizza : NSObject
 
 @property (nonatomic) pizzaSize pizzaSize;
-@property (assign) NSArray *pizzaToppings;
+@property (nonatomic,strong) NSArray *pizzaToppings;
 
     
     
 //PIZZA METHODS
-    
+    - (instancetype)initWithToppings:(NSArray *)toppings andSize: (pizzaSize) size;
+
     +(NSString*) getFirstElementArray : (NSArray*) firstElement ;
     +(NSArray*)  getRestofArrayToppings : (NSArray*) toppingArray;
-    
-    - (instancetype)initWithToppings:(NSArray *)toppings andSize: (pizzaSize) size;
-    
     +(pizzaSize) convertStringtoSize : (NSString*) userInputString;
-
-   +(NSString*) convertPizzaArraytoStringToppings: (NSArray*) orderArray ;
+    +(NSString*) convertPizzaArraytoStringToppings: (NSArray*) orderArray ;
 
     
    
